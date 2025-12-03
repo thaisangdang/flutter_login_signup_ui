@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_signup_ui/screens/signup_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -109,6 +110,26 @@ class _LoginPageState extends State<LoginPage> {
                       'LOGIN',
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
+                  ),
+
+                  // Link to Signup Page
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text("Don't have an account?"),
+                      TextButton(
+                        onPressed: () {
+                          // Navigate to Signup Page
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const SignupPage(),
+                            ),
+                          );
+                        },
+                        child: const Text('Sign Up'),
+                      ),
+                    ],
                   ),
                 ],
               ),

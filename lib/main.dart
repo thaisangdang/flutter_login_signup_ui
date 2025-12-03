@@ -1,20 +1,29 @@
 import 'package:flutter/material.dart';
+import 'screens/login_page.dart';
+// Note: We don't need to import signup here if we navigate to it from login_page
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Login Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        // Make text fields look modern globally (Optional)
+        inputDecorationTheme: InputDecorationTheme(
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
+          filled: true,
+          fillColor: Colors.grey[100],
         ),
       ),
+      home: const LoginPage(),
     );
   }
 }
