@@ -15,10 +15,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Login Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
         // Make text fields look modern globally (Optional)
         inputDecorationTheme: InputDecorationTheme(
-          border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0)),
           filled: true,
           fillColor: Colors.grey[100],
         ),

@@ -18,7 +18,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.deepPurple[50],
       // 3. SafeArea keeps UI away from notches/status bars
       body: SafeArea(
         child: Center(
@@ -32,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   // --- LOGO ---
-                  const Icon(Icons.lock_person, size: 100, color: Colors.blue),
+                  const Icon(Icons.lock_person, size: 100, color: Colors.grey),
                   const SizedBox(height: 20),
                   const Text(
                     'Welcome Back',
@@ -47,7 +47,6 @@ class _LoginPageState extends State<LoginPage> {
                     decoration: const InputDecoration(
                       labelText: 'Email',
                       prefixIcon: Icon(Icons.email),
-                      border: OutlineInputBorder(),
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -65,7 +64,6 @@ class _LoginPageState extends State<LoginPage> {
                     decoration: InputDecoration(
                       labelText: 'Password',
                       prefixIcon: const Icon(Icons.lock),
-                      border: const OutlineInputBorder(),
                       suffixIcon: IconButton(
                         icon: Icon(
                           _isObscured ? Icons.visibility : Icons.visibility_off,
@@ -93,9 +91,9 @@ class _LoginPageState extends State<LoginPage> {
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(vertical: 16),
-                      backgroundColor: Colors.blue,
+                      backgroundColor: Colors.deepPurpleAccent,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8),
+                        borderRadius: BorderRadius.circular(24),
                       ),
                     ),
                     onPressed: () {

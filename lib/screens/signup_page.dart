@@ -25,7 +25,7 @@ class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.deepPurple[50],
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -48,7 +48,6 @@ class _SignupPageState extends State<SignupPage> {
                     decoration: const InputDecoration(
                       labelText: 'Full Name',
                       prefixIcon: Icon(Icons.person),
-                      border: OutlineInputBorder(),
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -65,7 +64,6 @@ class _SignupPageState extends State<SignupPage> {
                     decoration: const InputDecoration(
                       labelText: 'Email',
                       prefixIcon: Icon(Icons.email),
-                      border: OutlineInputBorder(),
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -84,7 +82,6 @@ class _SignupPageState extends State<SignupPage> {
                     decoration: InputDecoration(
                       labelText: 'Password',
                       prefixIcon: const Icon(Icons.lock),
-                      border: const OutlineInputBorder(),
                       suffixIcon: IconButton(
                         icon: Icon(
                           _isObscured ? Icons.visibility : Icons.visibility_off,
@@ -109,7 +106,6 @@ class _SignupPageState extends State<SignupPage> {
                     decoration: const InputDecoration(
                       labelText: 'Confirm Password',
                       prefixIcon: Icon(Icons.lock_outline),
-                      border: OutlineInputBorder(),
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -129,7 +125,10 @@ class _SignupPageState extends State<SignupPage> {
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       backgroundColor:
-                          Colors.green, // Different color for Signup
+                          Colors.deepPurpleAccent, // Different color for Signup
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(24),
+                      ),
                     ),
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
