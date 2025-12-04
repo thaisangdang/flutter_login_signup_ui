@@ -20,7 +20,7 @@ By building this project, you will learn:
 
 1. **Ensure you are in the project directory:**
     
-    `cd login_signup_ui`
+    `cd flutter_login_signup_ui`
     
 2. **Install Dependencies:**
     
